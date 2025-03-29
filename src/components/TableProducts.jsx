@@ -4,12 +4,12 @@ import { productsAll } from "../services/productService"
 export const TableProducts = () => {
 
     const [products, setproducts] = useState([])
-    const [error, setError] = useState(null)
+  
     
     useEffect(() => {
         productsAll()
             .then(setproducts)
-            .catch((err) => setError(err.message));
+            .catch((err) => err.message);
     }, []);
 
     return (

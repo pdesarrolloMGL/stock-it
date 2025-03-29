@@ -31,7 +31,7 @@ export const Login = () => {
             setSuccess("Login Exitoso");
 
             setTimeout(() => {
-                navigate("/dashboard");
+                navigate("/home");
             }, 1000);
         } catch (error) {
             setError("Error desconocido");
